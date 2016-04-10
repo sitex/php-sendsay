@@ -60,6 +60,7 @@ class Client implements ClientInterface
             /** @var MessageInterface $message */
             $message = $this->request('login', [
                 'login' => $this->options['login'],
+                'sublogin' => $this->options['sublogin'],
                 'passwd' => $this->options['password']
             ]);
             $data = $message->getData();
