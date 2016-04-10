@@ -164,11 +164,11 @@ class Client implements ClientInterface
         if($this->session !== null){
             $data['session'] = $this->session;
         }
-        array_walk($data, function($item, $key){
-            if(!mb_detect_encoding($item, 'utf-8', true)){
-                $data[$key] = utf8_encode($item);
-            }
-        });
+        //array_walk($data, function($item, $key){
+        //    if(!mb_detect_encoding($item, 'utf-8', true)){
+        //        $data[$key] = utf8_encode($item);
+        //    }
+        //});
         return json_encode($data);
     }
 }
